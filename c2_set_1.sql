@@ -30,9 +30,8 @@ SELECT a.rating,b.mean FROM(SELECT COUNT(sname) AS num,rating FROM SAILORS GROUP
 
 *******************
 
-[8:08 am, 11/06/2021] Roshmi Roy Mca: 5.SELECT DISTINCT sname FROM SAILORS,RESERVES,BOATS WHERE color = 'Red'AND 
-boats.bid = reserves.bid AND sailors.sid = reserves.sid order by age;
-[8:08 am, 11/06/2021] Roshmi Roy Mca: 12.SELECT sname,rating FROM SAILORS WHERE rating >(SELECT MAX(rating) FROM SAILORS WHERE sname = 'Horatio');
+ 5.SELECT DISTINCT sname FROM SAILORS,RESERVES,BOATS WHERE color = 'Red'AND 
+boats.bid = reserves.bid AND sailors.sid = reserves.sid order by age; 12.SELECT sname,rating FROM SAILORS WHERE rating >(SELECT MAX(rating) FROM SAILORS WHERE sname = 'Horatio');
 
 13. SELECT sname FROM(SELECT sname,reserves.sid,COUNT(bid) AS id FROM RESERVES,SAILORS
 WHERE reserves.sid = sailors.sid GROUP BY reserves.SID,sname) a WHERE id =( SELECT COUNT(bid) FROM BOATS);
